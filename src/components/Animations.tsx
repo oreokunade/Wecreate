@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React, { ReactNode } from 'react';
 
 export function ScrollReveal({ children, delay = 0, yOffset = 50 }: { children: ReactNode, delay?: number, yOffset?: number }) {
@@ -19,7 +19,7 @@ export function ScrollReveal({ children, delay = 0, yOffset = 50 }: { children: 
 export function AnimatedText({ text, el: Wrapper = "p", className }: { text: string, el?: React.ElementType, className?: string }) {
   const words = text.split(" ");
   
-  const container = {
+  const container: Variants = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
       opacity: 1,
@@ -27,7 +27,7 @@ export function AnimatedText({ text, el: Wrapper = "p", className }: { text: str
     }),
   };
 
-  const child = {
+  const child: Variants = {
     visible: {
       opacity: 1,
       y: 0,

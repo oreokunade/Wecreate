@@ -11,7 +11,7 @@ export default function SmoothScrolling({
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
       direction: 'vertical', 
       gestureDirection: 'vertical',
       smooth: true,
@@ -19,7 +19,7 @@ export default function SmoothScrolling({
       smoothTouch: false,
       touchMultiplier: 2,
       infinite: false,
-    });
+    } as any);
 
     let frameId: number;
     function raf(time: number) {
