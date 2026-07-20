@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wecreate Consult | Investment Readiness, Fundraising and Grants</title>
+    <meta name="description" content="Over ₦550 million in funding facilitated. Abuja based firm building the valuations, decks, grant proposals and growth plans that get African startups and NGOs funded.">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        /* Specific Home Page Overrides/Additions */
+        .hero { position: relative; overflow: hidden; }
+        .hero-bg {
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-image: url('images/abstract_hero.png');
+            background-size: cover;
+            background-position: center right;
+            opacity: 0.05;
+            z-index: -1;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: var(--space-xl) 0;
+            margin: var(--space-xl) 0;
+        }
+        
+        .stat-item {
+            position: relative;
+        }
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: calc(var(--space-lg) / -2);
+            top: 10%;
+            height: 80%;
+            width: 1px;
+            background-color: var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            .stat-item:not(:last-child)::after { display: none; }
+            .stats-grid { gap: var(--space-md); padding: var(--space-lg) 0; }
+        }
+
+        .process-list {
+            list-style: none;
+            counter-reset: process-counter;
+        }
+        .process-item {
+            position: relative;
+            padding-left: 4rem;
+            margin-bottom: var(--space-lg);
+        }
+        .process-item::before {
+            counter-increment: process-counter;
+            content: "0" counter(process-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--border-color);
+            line-height: 1;
+        }
+        .process-item h3 { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Wecreate<span class="text-primary">.</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="converge.html">CONVERGE 2026</a></li>
+                <li><a href="insights.html">Insights</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary" style="display: none;">Book a call</a> <!-- Hidden on mobile via CSS later, shown on desktop -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="section-lg hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Most startups do not fail at the pitch. They fail at the preparation.</h1>
+                <p class="text-xl" style="max-width: 800px; margin-top: var(--space-md);">Wecreate Consult builds the strategy, the numbers and the narrative that make investors say yes, funders commit and customers stay. For startups, established businesses and NGOs. Based in Abuja. Working across Africa.</p>
+                <div style="margin: var(--space-lg) 0;">
+                    <p style="font-family: var(--font-display); font-weight: 500; color: var(--text-main);">Over ₦550 million in funding facilitated for our clients. Still counting.</p>
+                </div>
+                <div class="flex gap-md" style="flex-wrap: wrap;">
+                    <a href="contact.html" class="btn btn-primary">Book a discovery call</a>
+                    <a href="services.html" class="btn btn-secondary">See how we work</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Problem Section -->
+    <section class="section container">
+        <div class="grid" style="grid-template-columns: 1fr 1.5fr; gap: var(--space-xl); align-items: start;">
+            <div>
+                <h2>You have the business. What you may not have is the case for it.</h2>
+            </div>
+            <div>
+                <p class="text-lg">Founders come to us at the point where instinct stops being enough. The traction is real but the model does not explain it. The market is there but the deck does not prove it. The round is open but the data room is a folder of half finished files.</p>
+                <p class="text-lg" style="color: var(--text-main);">Capital does not reward the best idea in the room. It rewards the founder who can defend that idea with evidence, structure and clarity under pressure. That is the gap we close.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="section container" style="background-color: var(--surface-color); border-radius: 24px; padding: var(--space-xl);">
+        <div class="flex justify-between items-center" style="margin-bottom: var(--space-xl);">
+            <h2>Six ways we work with you</h2>
+            <a href="services.html" class="btn btn-secondary">Explore our services</a>
+        </div>
+        <div class="grid grid-3">
+            <div class="card" style="background: var(--bg-color);">
+                <h3>Investment Readiness</h3>
+                <p>We get you ready to be examined. Valuation reports, cap tables, financial models, executive summaries, pitch decks and a data room that holds up to real diligence. By the time an investor asks the hard question, you have already answered it.</p>
+            </div>
+            <div class="card" style="background: var(--bg-color);">
+                <h3>Fundraising Execution</h3>
+                <p>We do not stop at the deck. We build the target list, shape the outreach, prepare you for the room and manage the process until the round closes. You stay focused on the business. We run the raise.</p>
+            </div>
+            <div class="card" style="background: var(--bg-color);">
+                <h3>Go to Market & Growth</h3>
+                <p>Strategy that reaches the market, not just the boardroom. Positioning, channel planning, media budgeting, launch sequencing and the commercial logic underneath it all. Written to be executed, not admired.</p>
+            </div>
+            <div class="card" style="background: var(--bg-color);">
+                <h3>Grant Writing</h3>
+                <p>Grants are won on paper long before they are won in person. We write proposals, concept notes and full applications for startups, social enterprises and NGOs, and we scout the non dilutive funding you may not know you qualify for.</p>
+            </div>
+            <div class="card" style="background: var(--bg-color);">
+                <h3>Business Advisory</h3>
+                <p>Not every problem is a raise or a launch. We advise on pricing, business models, operations, market entry and the decisions in between. When you need a second brain in the room before a big call, this is where we sit.</p>
+            </div>
+            <div class="card" style="background: var(--bg-color);">
+                <h3>Brand & Media</h3>
+                <p>Through Wecreate Media, we build the brand and the pipeline together. Content strategy, campaign planning, partnership development and sponsorship materials that open doors and hold them open.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section class="section container">
+        <div style="max-width: 800px;">
+            <h2 style="margin-bottom: var(--space-lg);">Work that has already been through the fire</h2>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="proof-number">₦550M<span class="text-primary">+</span></div>
+                <p style="color: var(--text-main); font-weight: 500;">in funding facilitated, and counting</p>
+            </div>
+            <div class="stat-item">
+                <div class="proof-number">6</div>
+                <p style="color: var(--text-main); font-weight: 500;">service lines from readiness to raise</p>
+            </div>
+            <div class="stat-item">
+                <div class="proof-number">61</div>
+                <p style="color: var(--text-main); font-weight: 500;">Abuja startups mapped and verified</p>
+            </div>
+            <div class="stat-item">
+                <div class="proof-number">1.5K<span class="text-primary">+</span></div>
+                <p style="color: var(--text-main); font-weight: 500;">attendees expected at CONVERGE 2026</p>
+            </div>
+        </div>
+
+        <div class="grid grid-2" style="align-items: end;">
+            <p class="text-lg">We have built cap tables and valuation models for seed stage technology companies raising in Nigeria and abroad. We have written go to market strategies and media plans for consumer platforms in Lagos. We have taken maternal health, agritech, fintech and diaspora community businesses from a rough idea of what they were worth to a defensible position they could present with a straight back.</p>
+            <div>
+                <p class="text-lg" style="margin-bottom: var(--space-md);">We have also mapped the Abuja startup ecosystem company by company, because you cannot advise a market you have not counted.</p>
+                <a href="work.html" class="btn btn-secondary">See selected work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="section container">
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-xl);">
+            <div>
+                <h2 style="position: sticky; top: 120px;">A process built for founders who are busy</h2>
+            </div>
+            <ul class="process-list">
+                <li class="process-item">
+                    <h3>Diagnose</h3>
+                    <p>A working session, not a sales call. We find out what you actually need, which is often not what you came in asking for.</p>
+                </li>
+                <li class="process-item">
+                    <h3>Scope</h3>
+                    <p>A written scope of work with deliverables, timelines and pricing on the table before anything begins. No drift. No surprises.</p>
+                </li>
+                <li class="process-item">
+                    <h3>Build</h3>
+                    <p>We produce. Models, decks, plans, documents. You review at fixed checkpoints, not at the end when it is too late to change direction.</p>
+                </li>
+                <li class="process-item">
+                    <h3>Deliver & Defend</h3>
+                    <p>You get client ready files you can send the same day, plus the preparation to defend every number in them.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sectors Strip -->
+    <section class="section" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container flex justify-between items-center flex-wrap gap-lg">
+            <h3 style="margin: 0; min-width: 250px;">Where we spend<br>most of our time</h3>
+            <p style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-main); flex: 1; margin: 0; min-width: 300px;">
+                Fintech and payments. Agritech and food systems. Health and maternal care. Consumer platforms and marketplaces. Diaspora and community technology. NGOs and social enterprises. Public sector and development programmes.
+            </p>
+            <p style="margin: 0; min-width: 250px;">If your sector is not listed, the discipline still travels. <a href="contact.html" style="color: var(--text-main);">Ask us.</a></p>
+        </div>
+    </section>
+
+    <!-- CONVERGE Strip -->
+    <section class="section-lg container" style="position: relative; overflow: hidden; border-radius: 24px; margin-top: var(--space-xl);">
+        <div style="position: absolute; top:0; right:0; bottom:0; left:0; background: url('images/converge_expo.png') center/cover; opacity: 0.1; z-index: -1;"></div>
+        <div style="max-width: 800px; padding: var(--space-xl);">
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem);">We do not just advise the ecosystem.<br>We convene it.</h2>
+            <p class="text-lg">Wecreate Consult convenes CONVERGE 2026, the Abuja Startup Expo. One day. Over 1,500 founders, investors, operators and policy makers. Four zones covering capital, building, enterprise and policy.</p>
+            <p style="font-family: var(--font-display); font-weight: 600; color: var(--text-main); margin-bottom: var(--space-md);">14 November 2026 &mdash; Abuja</p>
+            <a href="converge.html" class="btn btn-primary">Learn about CONVERGE 2026</a>
+        </div>
+    </section>
+
+    <!-- Closing Call to Action -->
+    <section class="section-lg container text-center" style="max-width: 800px;">
+        <h2 style="font-size: clamp(3rem, 6vw, 4.5rem);">The round will not wait for you to be ready.</h2>
+        <p class="text-lg" style="margin: 0 auto var(--space-lg);">Tell us where you are in the process. We will tell you honestly what it will take to get you to the next stage, and whether we are the right people to take you there.</p>
+        <a href="contact.html" class="btn btn-primary" style="padding: 1.5rem 3rem; font-size: 1.25rem;">Start a conversation</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="footer-grid">
+            <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Wecreate<span class="text-primary">.</span></h3>
+                <p>Wecreate Consult. Strategy, capital and growth for African businesses and organisations.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="work.html">Selected Work</a></li>
+                    <li><a href="converge.html">CONVERGE 2026</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Start a conversation</a></li>
+                    <li>Abuja, Nigeria</li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-md); flex-wrap: wrap; gap: var(--space-md);">
+            <p style="margin: 0; font-size: 0.875rem;">&copy; 2026 Wecreate Consult. All rights reserved.</p>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <p style="margin: 0; font-size: 0.875rem; font-weight: 500;">Notes from inside the work, sent occasionally. No filler.</p>
+                <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Join the list</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

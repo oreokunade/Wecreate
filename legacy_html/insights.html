@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Wecreate Consult</title>
+    <meta name="description" content="Notes from inside the work. Written for founders, not for algorithms.">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .article-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article-item {
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .article-item:first-child {
+            border-top: 1px solid var(--border-color);
+        }
+        .article-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+        .article-title:hover {
+            color: var(--primary);
+        }
+        
+        .subscribe-box {
+            background: var(--surface-color);
+            padding: var(--space-xl);
+            border-radius: 12px;
+            text-align: center;
+            max-width: 800px;
+            margin: var(--space-2xl) auto;
+        }
+        .subscribe-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: var(--space-md) auto 0;
+        }
+        .subscribe-form input {
+            flex: 1;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+        }
+        .subscribe-form button {
+            white-space: nowrap;
+        }
+        @media (max-width: 600px) {
+            .subscribe-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Wecreate<span class="text-primary">.</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="converge.html">CONVERGE 2026</a></li>
+                <li><a href="insights.html" class="active">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="section-lg container text-center">
+        <h1 style="max-width: 900px; margin: 0 auto var(--space-md);">What we are seeing</h1>
+        <p class="text-xl" style="color: var(--text-main);">Notes from inside the work. Written for founders, not for algorithms.</p>
+    </header>
+
+    <!-- Insights List -->
+    <section class="container section" style="padding-top: 0;">
+        <ul class="article-list">
+            <li class="article-item">
+                <a href="#" class="article-title">What Nigerian investors actually read in your deck, and in what order</a>
+            </li>
+            <li class="article-item">
+                <a href="#" class="article-title">Why your cap table is costing you more than your valuation is earning you</a>
+            </li>
+            <li class="article-item">
+                <a href="#" class="article-title">The 61 startups building in Abuja right now</a>
+            </li>
+            <li class="article-item">
+                <a href="#" class="article-title">Non dilutive funding in Nigeria: what exists and who really qualifies</a>
+            </li>
+            <li class="article-item">
+                <a href="#" class="article-title">The go to market plan that fits on one page</a>
+            </li>
+        </ul>
+
+        <!-- Empty state / Subscribe prompt -->
+        <div class="subscribe-box">
+            <h3 style="margin-bottom: 0.5rem;">New writing lands here regularly.</h3>
+            <p>Join the list and we will send it to you directly.</p>
+            <form class="subscribe-form" onsubmit="event.preventDefault();">
+                <input type="email" placeholder="Email address" required>
+                <button type="submit" class="btn btn-primary">Join the list</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-md); flex-wrap: wrap; gap: var(--space-md);">
+            <p style="margin: 0; font-size: 0.875rem;">&copy; 2026 Wecreate Consult. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

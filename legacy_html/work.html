@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Work | Wecreate Consult</title>
+    <meta name="description" content="Valuations, cap tables, go to market strategies and fundraising builds across fintech, agritech, health and consumer platforms.">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .work-list {
+            list-style: none;
+            border-top: 1px solid var(--border-color);
+        }
+        .work-item {
+            padding: var(--space-lg) 0;
+            border-bottom: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-xl);
+            align-items: start;
+            transition: background-color 0.3s ease;
+        }
+        @media (max-width: 768px) {
+            .work-item { grid-template-columns: 1fr; gap: var(--space-sm); }
+        }
+        
+        .work-meta {
+            font-family: var(--font-display);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+        .work-meta span { display: block; margin-bottom: 0.25rem; }
+        
+        .work-content h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            margin-bottom: var(--space-sm);
+        }
+        .work-details {
+            display: none;
+            margin-top: var(--space-md);
+            padding-top: var(--space-md);
+            border-top: 1px solid var(--border-color);
+        }
+        /* Open state */
+        .work-item:hover .work-details {
+            display: block;
+        }
+        .work-item:hover {
+            background-color: var(--surface-color);
+            padding-left: var(--space-md);
+            padding-right: var(--space-md);
+            margin-left: calc(var(--space-md) * -1);
+            margin-right: calc(var(--space-md) * -1);
+            border-radius: 8px;
+            border-bottom-color: transparent;
+        }
+
+        .outcome-box {
+            background: var(--bg-color);
+            padding: var(--space-md);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-top: var(--space-md);
+        }
+        .outcome-box strong { color: var(--primary); font-family: var(--font-display); font-size: 1.25rem;}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Wecreate<span class="text-primary">.</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html" class="active">Work</a></li>
+                <li><a href="converge.html">CONVERGE 2026</a></li>
+                <li><a href="insights.html">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="section-lg container">
+        <h1 style="max-width: 900px; margin-bottom: var(--space-lg);">Selected work</h1>
+        <p class="text-xl" style="max-width: 800px; color: var(--text-main);">Over ₦550 million in funding facilitated for clients across fintech, agritech, health, consumer platforms and the development sector.</p>
+        <p class="text-lg" style="max-width: 700px;">A view of the problems we have solved and the shape of what we deliver. Client details are shared only with permission.</p>
+    </header>
+
+    <!-- Work List -->
+    <section class="container section" style="padding-top: 0;">
+        <ul class="work-list">
+            
+            <li class="work-item">
+                <div class="work-meta">
+                    <span>Client: Seed stage technology company</span>
+                    <span>Sector: Technology</span>
+                    <span>Engagement: Investment Readiness</span>
+                </div>
+                <div class="work-content">
+                    <h3>Valuation and cap table build</h3>
+                    <p class="text-lg">The company needed a defensible position before entering investor conversations.</p>
+                    
+                    <div class="work-details">
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">What we did:</p>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
+                            <li>Built a full seed round valuation applying five methodologies.</li>
+                            <li>Standardised cap table with ownership waterfall.</li>
+                            <li>Created post-round scenarios.</li>
+                        </ul>
+                        <div class="outcome-box">
+                            <strong>The outcome:</strong>
+                            <p style="margin-top: 0.5rem; margin-bottom: 0;">The founder walked into investor conversations able to defend the number from five directions.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="work-item">
+                <div class="work-meta">
+                    <span>Client: Consumer meal subscription platform</span>
+                    <span>Sector: Food & Beverage</span>
+                    <span>Engagement: Go to Market & Fundraising</span>
+                </div>
+                <div class="work-content">
+                    <h3>Market entry and fundraising plan</h3>
+                    <p class="text-lg">Taking a Lagos consumer platform from an idea of its market to a costed plan for taking it.</p>
+                    
+                    <div class="work-details">
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">What we did:</p>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
+                            <li>Delivered a comprehensive go-to-market strategy.</li>
+                            <li>Created a detailed media plan.</li>
+                            <li>Built an eighteen-month budget model.</li>
+                            <li>Drafted a fundraising execution proposal.</li>
+                        </ul>
+                        <div class="outcome-box">
+                            <strong>The outcome:</strong>
+                            <p style="margin-top: 0.5rem; margin-bottom: 0;">One engagement aligned their operational runway with a clear, investable roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="work-item">
+                <div class="work-meta">
+                    <span>Client: Maternal health social enterprise</span>
+                    <span>Sector: Health / NGO</span>
+                    <span>Engagement: Business Advisory</span>
+                </div>
+                <div class="work-content">
+                    <h3>Rural Nigeria expansion architecture</h3>
+                    <p class="text-lg">Operating where willingness to pay and ability to pay are not the same question.</p>
+                    
+                    <div class="work-details">
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">What we did:</p>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
+                            <li>Produced a full business plan.</li>
+                            <li>Architected the revenue stream structure.</li>
+                            <li>Designed a bundled service pricing model.</li>
+                        </ul>
+                        <div class="outcome-box">
+                            <strong>The outcome:</strong>
+                            <p style="margin-top: 0.5rem; margin-bottom: 0;">Established a sustainable commercial framework that balanced social impact with operational viability.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="work-item">
+                <div class="work-meta">
+                    <span>Client: Wecreate Consult (Internal)</span>
+                    <span>Sector: Ecosystem</span>
+                    <span>Engagement: Research</span>
+                </div>
+                <div class="work-content">
+                    <h3>Abuja startup ecosystem mapping</h3>
+                    <p class="text-lg">Establishing a trusted baseline because you cannot advise a market you have not counted.</p>
+                    
+                    <div class="work-details">
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">What we did:</p>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
+                            <li>Compiled a verified workbook of startups from multiple primary sources.</li>
+                            <li>Bypassed public lists that could not be trusted at face value.</li>
+                        </ul>
+                        <div class="outcome-box">
+                            <strong>The outcome:</strong>
+                            <p style="margin-top: 0.5rem; margin-bottom: 0;">Verified 61 Abuja-based startups. This is now the reference base for all our regional work.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="work-item">
+                <div class="work-meta">
+                    <span>Client: Diaspora community platform</span>
+                    <span>Sector: Community Tech</span>
+                    <span>Engagement: Investment Readiness</span>
+                </div>
+                <div class="work-content">
+                    <h3>United Kingdom market launch</h3>
+                    <p class="text-lg">Preparing an African diaspora platform for international expansion.</p>
+                    
+                    <div class="work-details">
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">What we did:</p>
+                        <ul style="padding-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted);">
+                            <li>Built the primary pitch deck.</li>
+                            <li>Drafted the executive summary.</li>
+                        </ul>
+                        <div class="outcome-box">
+                            <strong>The outcome:</strong>
+                            <p style="margin-top: 0.5rem; margin-bottom: 0;">Armed the founders with institutional-grade materials tailored for UK-based venture capital.</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+        
+        <div style="margin-top: var(--space-2xl); text-center;">
+            <a href="contact.html" class="btn btn-primary">Discuss your project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-md); flex-wrap: wrap; gap: var(--space-md);">
+            <p style="margin: 0; font-size: 0.875rem;">&copy; 2026 Wecreate Consult. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

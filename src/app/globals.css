@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Base Reset ===== */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: 'Mona Sans', system-ui, sans-serif;
+    background-color: #FAFAFA;
+    color: #0A0A0A;
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul, ol {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
+  h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+  h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+
+  ::selection {
+    background-color: #0066FF;
+    color: white;
+  }
+}
+
+/* ===== Lenis ===== */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ===== Service Hover Reveal ===== */
+.service-item {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.service-item .service-img-wrapper {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  display: inline-block;
+  vertical-align: middle;
+  height: 80px;
+  margin: 0;
+  border-radius: 8px;
+}
+.service-item:hover {
+  background-color: #0066FF;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.service-item:hover .service-img-wrapper {
+  opacity: 1;
+  width: 120px;
+  margin: 0 1rem;
+}
+.service-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Focus Styles ===== */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-bottom-color: #0066FF !important;
+}

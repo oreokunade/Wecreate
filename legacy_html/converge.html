@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERGE 2026 | Abuja Startup Expo</title>
+    <meta name="description" content="One day. Over 1,500 founders, investors, operators and policy makers. 14 November 2026 in Abuja. Register interest or become a sponsor.">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .converge-hero {
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            overflow: hidden;
+            background-color: #111;
+        }
+        .converge-hero-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url('images/converge_expo.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .converge-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .zone-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background-color: var(--border-color);
+            border: 1px solid var(--border-color);
+        }
+        @media (max-width: 768px) {
+            .zone-grid { grid-template-columns: 1fr; }
+        }
+        
+        .zone-card {
+            background-color: var(--bg-color);
+            padding: var(--space-xl);
+        }
+        .zone-card h3 {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (Dark theme variant for this page header) -->
+    <nav class="navbar" style="background-color: transparent; border-bottom: none; position: absolute; width: 100%; z-index: 10;">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo" style="color: #FFF;">Wecreate<span class="text-primary">.</span></a>
+            <button class="mobile-menu-btn" style="color: #FFF;">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" style="color: #EEE;">Home</a></li>
+                <li><a href="about.html" style="color: #EEE;">About</a></li>
+                <li><a href="services.html" style="color: #EEE;">Services</a></li>
+                <li><a href="work.html" style="color: #EEE;">Work</a></li>
+                <li><a href="converge.html" style="color: #FFF; font-weight: 600;">CONVERGE 2026</a></li>
+                <li><a href="insights.html" style="color: #EEE;">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="converge-hero">
+        <div class="converge-hero-bg"></div>
+        <div class="container">
+            <h1 style="font-size: clamp(4rem, 8vw, 8rem); margin-bottom: 0; line-height: 1;">CONVERGE</h1>
+            <h2 style="font-size: clamp(2rem, 4vw, 4rem); font-weight: 300; margin-bottom: var(--space-md); color: #DDD;">2026</h2>
+            
+            <p class="text-xl" style="max-width: 600px; color: #FFF; margin-bottom: var(--space-lg);">The Abuja Startup Expo. One day. Over 1,500 founders, investors, operators and policy makers in one room.</p>
+            
+            <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 500; margin-bottom: var(--space-lg);">
+                <span style="display: block; margin-bottom: 0.25rem;">Date: 14 November 2026</span>
+                <span>Location: Abuja, Nigeria</span>
+            </div>
+            
+            <div class="flex gap-md" style="flex-wrap: wrap;">
+                <a href="#register" class="btn btn-primary">Register interest</a>
+                <a href="#sponsor" class="btn" style="background-color: transparent; border: 1px solid #FFF; color: #FFF;">Become a sponsor</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Why CONVERGE exists -->
+    <section class="container section-lg text-center" style="max-width: 900px;">
+        <h2 style="margin-bottom: var(--space-md);">Why CONVERGE exists</h2>
+        <p class="text-xl" style="color: var(--text-main);">Abuja is not a satellite of anywhere. It has founders building serious companies, capital that has never been properly introduced to them, and a policy community sitting closer to both than in any other city in the country.</p>
+        <p class="text-xl" style="color: var(--primary); font-weight: 500;">CONVERGE puts them in the same room for one day and makes the introductions that should have happened years ago.</p>
+    </section>
+
+    <!-- The Four Zones -->
+    <section class="container section">
+        <h2 style="text-align: center; margin-bottom: var(--space-xl);">The four zones</h2>
+        <div class="zone-grid">
+            <div class="zone-card">
+                <h3>Capital</h3>
+                <p class="text-lg">Investors, funds, angels and the founders raising from them. Frank conversation about what actually gets funded in this market.</p>
+            </div>
+            <div class="zone-card">
+                <h3>Builders</h3>
+                <p class="text-lg">Product, engineering and the craft of building. For the people writing the code and shipping the thing.</p>
+            </div>
+            <div class="zone-card">
+                <h3>Enterprise</h3>
+                <p class="text-lg">Corporates, procurement and the commercial partnerships that turn a startup into a business.</p>
+            </div>
+            <div class="zone-card">
+                <h3>Policy</h3>
+                <p class="text-lg">Regulators, agencies and the people whose decisions become your constraints. Access, not commentary.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Participation -->
+    <section class="container section-lg">
+        <div class="grid grid-2" style="gap: var(--space-xl);">
+            <div style="background: var(--surface-color); padding: var(--space-xl); border-radius: 12px;">
+                <h3 id="sponsor">For sponsors</h3>
+                <p class="text-lg">CONVERGE is where the founders you want to reach are already standing. Sponsorship packages cover main stage presence, zone ownership, exhibition space and delegate engagement.</p>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: var(--space-md);">Request the sponsorship pack</a>
+            </div>
+            
+            <div style="background: var(--surface-color); padding: var(--space-xl); border-radius: 12px;">
+                <h3 id="register">For exhibitors</h3>
+                <p class="text-lg">Exhibition space is limited and priced to keep the floor useful rather than crowded. Connect directly with decision makers and early adopters.</p>
+                <a href="contact.html" class="btn btn-secondary" style="margin-top: var(--space-md);">Request exhibition pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-md); flex-wrap: wrap; gap: var(--space-md);">
+            <p style="margin: 0; font-size: 0.875rem;">&copy; 2026 Wecreate Consult. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Adjust navbar color on scroll for this page
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.navbar');
+            const links = document.querySelectorAll('.nav-links a');
+            const logo = document.querySelector('.logo');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                nav.style.borderBottom = '1px solid var(--border-color)';
+                links.forEach(l => l.style.color = 'var(--text-muted)');
+                document.querySelector('.nav-links a.active').style.color = 'var(--text-main)';
+                logo.style.color = 'var(--text-main)';
+                mobileBtn.style.color = 'var(--text-main)';
+            } else {
+                nav.style.backgroundColor = 'transparent';
+                nav.style.borderBottom = 'none';
+                links.forEach(l => l.style.color = '#EEE');
+                document.querySelector('.nav-links a.active').style.color = '#FFF';
+                logo.style.color = '#FFF';
+                mobileBtn.style.color = '#FFF';
+            }
+        });
+    </script>
+</body>
+</html>

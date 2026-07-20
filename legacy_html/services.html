@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Wecreate Consult</title>
+    <meta name="description" content="Investment Readiness, Fundraising Execution, Go to Market Strategy, Grant Writing and Business Advisory for African companies.">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .services-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--space-2xl);
+            align-items: start;
+        }
+        @media (max-width: 1024px) {
+            .services-layout { grid-template-columns: 1fr; }
+            .services-nav { display: none; }
+        }
+
+        .services-nav {
+            position: sticky;
+            top: 120px;
+            list-style: none;
+        }
+        .services-nav li {
+            margin-bottom: 1rem;
+        }
+        .services-nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            transition: color 0.2s;
+            display: block;
+            padding-left: 1rem;
+            border-left: 2px solid transparent;
+        }
+        .services-nav a:hover {
+            color: var(--text-main);
+        }
+        .services-nav a.active {
+            color: var(--primary);
+            border-left-color: var(--primary);
+            font-weight: 500;
+        }
+
+        .service-section {
+            padding-top: 80px; /* Offset for sticky header if linking directly */
+            margin-bottom: var(--space-2xl);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: var(--space-2xl);
+        }
+        .service-section:last-child {
+            border-bottom: none;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: var(--space-md) 0 var(--space-xl);
+            display: grid;
+            gap: 0.75rem;
+        }
+        .service-features li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .service-features li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--text-muted);
+        }
+        .who-its-for {
+            background: var(--surface-color);
+            padding: var(--space-md);
+            border-radius: 8px;
+            margin-bottom: var(--space-lg);
+        }
+        .who-its-for h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" class="logo">Wecreate<span class="text-primary">.</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="converge.html">CONVERGE 2026</a></li>
+                <li><a href="insights.html">Insights</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="section-lg container">
+        <h1 style="max-width: 900px; margin-bottom: var(--space-lg);">The machinery of readiness.</h1>
+        <p class="text-xl" style="max-width: 700px; color: var(--text-main);">We build the strategy, the numbers and the narrative that make investors say yes, funders commit and customers stay.</p>
+    </header>
+
+    <!-- Services Hub -->
+    <section class="container section">
+        <div class="services-layout">
+            <ul class="services-nav">
+                <li><a href="#investment-readiness" class="active">Investment Readiness</a></li>
+                <li><a href="#fundraising-execution">Fundraising Execution</a></li>
+                <li><a href="#go-to-market">Go to Market & Growth</a></li>
+                <li><a href="#grant-writing">Grant Writing & Funding</a></li>
+                <li><a href="#business-advisory">Business Advisory</a></li>
+                <li><a href="#brand-media">Brand & Media</a></li>
+            </ul>
+
+            <div class="services-content">
+                
+                <!-- 4.1 Investment Readiness -->
+                <div id="investment-readiness" class="service-section">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">Investment Readiness</h2>
+                    <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-md);">Be ready before you are asked.</p>
+                    
+                    <p class="text-lg">Investment readiness is the difference between a founder who answers a diligence question and a founder who anticipated it three weeks ago. We build the full evidence base behind your raise so that scrutiny becomes an advantage instead of an ambush.</p>
+                    
+                    <h3 style="margin-top: var(--space-lg); font-size: 1.5rem;">What you get</h3>
+                    <ul class="service-features">
+                        <li>Valuation report using multiple methodologies, with assumptions written out and defensible</li>
+                        <li>Cap table built as a working model, with ownership waterfall and post round scenario planning</li>
+                        <li>Financial model covering revenue build, cost structure and runway across a realistic horizon</li>
+                        <li>Pitch deck that carries the argument, not just the aesthetics</li>
+                        <li>Executive summary and one page teaser for first contact</li>
+                        <li>Structured data room, organised the way investors actually read it</li>
+                    </ul>
+
+                    <div class="who-its-for">
+                        <h4>Who this is for</h4>
+                        <p>Founders preparing a pre seed, seed or bridge round. Companies that have been asked for a data room and realised they do not have one. Teams whose numbers live in three different spreadsheets and one person's head.</p>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Get investment ready</a>
+                </div>
+
+                <!-- 4.2 Fundraising Execution -->
+                <div id="fundraising-execution" class="service-section">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">Fundraising Execution</h2>
+                    <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-md);">The deck is the easy part.</p>
+                    
+                    <p class="text-lg">Raising is a process, not an event. It has a pipeline, a cadence, a conversion rate and a failure mode. We run it like the operational discipline it is, from first target list to final close.</p>
+                    
+                    <h3 style="margin-top: var(--space-lg); font-size: 1.5rem;">What you get</h3>
+                    <ul class="service-features">
+                        <li>Investor mapping and a qualified target list matched to your stage, sector and cheque size</li>
+                        <li>Outreach sequencing and customised approach materials per investor category</li>
+                        <li>Pitch preparation and objection handling, run as live rehearsal</li>
+                        <li>Grant and non dilutive funding scouting where it applies</li>
+                        <li>Process management, follow through and pipeline reporting until the round closes</li>
+                        <li>Support through term sheet review conversations and diligence requests</li>
+                    </ul>
+
+                    <div class="who-its-for">
+                        <h4>Who this is for</h4>
+                        <p>Founders who have the materials but not the process. Teams who have taken twenty meetings and closed nothing. Companies that need a raise run properly while they keep running the business.</p>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Run my raise</a>
+                </div>
+
+                <!-- 4.3 Go to Market and Growth -->
+                <div id="go-to-market" class="service-section">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">Go to Market and Growth</h2>
+                    <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-md);">Strategy you can execute on Monday.</p>
+                    
+                    <p class="text-lg">Most growth strategy documents die in a shared drive. Ours are built backwards from the actions someone has to take, the money they have to spend and the number they have to hit.</p>
+                    
+                    <h3 style="margin-top: var(--space-lg); font-size: 1.5rem;">What you get</h3>
+                    <ul class="service-features">
+                        <li>Positioning and messaging architecture grounded in real customer language</li>
+                        <li>Channel strategy with prioritisation logic, not a list of everything that exists</li>
+                        <li>Media plan with budget allocation, expected reach and measurement framework</li>
+                        <li>Launch sequencing and commercial milestones</li>
+                        <li>Budget model across your planning horizon</li>
+                        <li>Pricing, packaging and offer design where it is the actual bottleneck</li>
+                    </ul>
+
+                    <div class="who-its-for">
+                        <h4>Who this is for</h4>
+                        <p>Companies entering a new market or category. Teams with a product and no distribution. Founders spending on marketing without knowing what it is returning.</p>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Plan your go to market</a>
+                </div>
+
+                <!-- 4.4 Grant Writing -->
+                <div id="grant-writing" class="service-section">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">Grant Writing & Development Funding</h2>
+                    <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-md);">Money that does not cost you equity.</p>
+                    
+                    <p class="text-lg">There is more grant and development funding available to African organisations than most ever apply for, and most applications that are sent fail for reasons that were visible on page one. We write proposals that survive the first cut and the last one, and we find the funding calls you did not know existed.</p>
+                    
+                    <h3 style="margin-top: var(--space-lg); font-size: 1.5rem;">What you get</h3>
+                    <ul class="service-features">
+                        <li>Grant scouting matched to your sector, stage and legal structure, covering local and international funders</li>
+                        <li>Concept notes and letters of enquiry that earn the invitation to apply in full</li>
+                        <li>Full grant proposals, budgets and logical frameworks written to the funder's own evaluation criteria</li>
+                        <li>Donor reporting templates and impact narratives for funding you have already won</li>
+                        <li>Application review and strengthening for proposals you have drafted in house</li>
+                        <li>Pipeline planning so you are applying on a schedule, not in a panic</li>
+                    </ul>
+
+                    <div class="who-its-for">
+                        <h4>Who this is for</h4>
+                        <p>NGOs and social enterprises competing for donor funding. Startups pursuing non dilutive capital alongside or instead of a raise. Organisations that keep getting shortlisted and never selected.</p>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Find your funding</a>
+                </div>
+
+                <!-- 4.5 Business Advisory -->
+                <div id="business-advisory" class="service-section">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">Business Advisory</h2>
+                    <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-md);">A second brain for the decisions that keep you up.</p>
+                    
+                    <p class="text-lg">Not every problem fits a neat service line. Sometimes the question is whether to enter a market, how to price a product, why the numbers stopped adding up or what to do about a partner conversation going sideways. Business advisory is where we work through it with you.</p>
+                    
+                    <h3 style="margin-top: var(--space-lg); font-size: 1.5rem;">What you get</h3>
+                    <ul class="service-features">
+                        <li>Business model review and redesign</li>
+                        <li>Pricing, packaging and revenue architecture</li>
+                        <li>Market entry and expansion assessment</li>
+                        <li>Operational and commercial process review</li>
+                        <li>Board, partner and stakeholder preparation</li>
+                        <li>Standing advisory retainers for organisations that want us in the room regularly</li>
+                    </ul>
+
+                    <div class="who-its-for">
+                        <h4>Who this is for</h4>
+                        <p>Founders and executives facing a decision they cannot afford to get wrong. Established businesses whose growth has outpaced their structure. NGOs and social enterprises professionalising how they operate and earn.</p>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Book an advisory session</a>
+                </div>
+
+                <!-- 4.6 Brand, Media and Business Development -->
+                <div id="brand-media" class="service-section" style="border-bottom: none;">
+                    <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">Brand, Media & Business Development</h2>
+                    <p style="font-family: var(--font-display); font-size: 1.5rem; color: var(--primary); margin-bottom: var(--space-md);">Visibility is a business asset. Build it like one.</p>
+                    
+                    <p class="text-lg">Through Wecreate Media, we build brand systems and revenue pipelines together, because the two problems are usually the same problem.</p>
+                    
+                    <h3 style="margin-top: var(--space-lg); font-size: 1.5rem;">What you get</h3>
+                    <ul class="service-features">
+                        <li>Brand positioning, narrative and identity direction</li>
+                        <li>Content strategy and platform specific execution, including short form and social video</li>
+                        <li>Campaign planning and management</li>
+                        <li>Partnership and sponsorship proposals, decks and outreach</li>
+                        <li>Business development materials for corporate, government and development sector conversations</li>
+                        <li>Programme and event proposals</li>
+                    </ul>
+
+                    <div class="who-its-for">
+                        <h4>Who this is for</h4>
+                        <p>Companies with a strong offer and a weak signal. Organisations pursuing sponsorship, partnership or public sector opportunities. Founders who need to be known in a market before they can sell into it.</p>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary">Build your presence</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer container">
+        <div class="footer-grid">
+            <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Wecreate<span class="text-primary">.</span></h3>
+                <p>Wecreate Consult. Strategy, capital and growth for African businesses and organisations.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Company</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="work.html">Selected Work</a></li>
+                    <li><a href="converge.html">CONVERGE 2026</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1rem;">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Start a conversation</a></li>
+                    <li>Abuja, Nigeria</li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-between items-center" style="border-top: 1px solid var(--border-color); padding-top: var(--space-md); flex-wrap: wrap; gap: var(--space-md);">
+            <p style="margin: 0; font-size: 0.875rem;">&copy; 2026 Wecreate Consult. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple script to update active nav link on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.service-section');
+            const navLinks = document.querySelectorAll('.services-nav a');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current) && current !== '') {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
