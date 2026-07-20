@@ -6,24 +6,36 @@ import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
-    question: "What service do you offer?",
-    answer: "We ensure you are fully prepared for investor scrutiny. This includes building comprehensive valuation reports, cap tables, financial models, executive summaries, pitch decks, and an investor-grade data room."
+    question: "Do you only work with startups?",
+    answer: "No. Startups are a large part of our work, but we also serve established businesses, NGOs, social enterprises and development organisations. The disciplines transfer: a grant proposal is diligence in another format, and a business model question is the same question whether you answer to investors or to donors."
   },
   {
-    question: "What is your pricing structure?",
-    answer: "Our pricing structure varies based on the engagement timeline and specific needs. A focused pitch deck rebuild has a fixed cost, while a full fundraising execution is typically retainer-based."
+    question: "Do you write grants for NGOs?",
+    answer: "Yes. Grant writing is a core service, covering scouting, concept notes, full proposals, budgets and donor reporting. We work with NGOs, social enterprises and startups pursuing non dilutive funding."
   },
   {
-    question: "Do you offer custom solutions?",
-    answer: "Yes, we work across the spectrum. While we excel in helping startups raise capital and scale, we also have extensive experience crafting custom solutions for established businesses and NGOs."
+    question: "Do you work outside Abuja?",
+    answer: "Yes. Our clients are across Nigeria and beyond, including Lagos and the diaspora. Most engagements run remotely with working sessions scheduled around your calendar."
   },
   {
-    question: "Do you offer consultation?",
-    answer: "Absolutely. We spend a lot of our time offering strategic consultation to help founders clarify their market position and refine their go-to-market strategies."
+    question: "How do you price?",
+    answer: "Every engagement begins with a written scope of work carrying fixed deliverables and fixed pricing. You know the number before we begin. Where a project genuinely cannot be scoped up front, we say so and structure it in phases."
   },
   {
-    question: "Does it integrate with other tools?",
-    answer: "Our processes and deliverables are designed to seamlessly integrate into your existing workflow, ensuring that your data room and documentation are perfectly aligned with standard industry tools."
+    question: "How long does an engagement take?",
+    answer: "An investment readiness build typically runs three to six weeks depending on the state of your existing numbers. Fundraising execution runs for the length of the raise. Go to market strategy is usually four weeks."
+  },
+  {
+    question: "Will you sign an NDA?",
+    answer: "Yes, as a matter of routine."
+  },
+  {
+    question: "Can you guarantee we will raise?",
+    answer: "No, and be careful of anyone who does. We can guarantee that when you walk into the room, nothing in your materials will be the reason you are turned down."
+  },
+  {
+    question: "What do you need from us to start?",
+    answer: "Whatever you currently have, however rough. Numbers, decks, spreadsheets, notes. We would rather see the mess than a version cleaned up for our benefit."
   }
 ];
 
