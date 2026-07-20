@@ -1,9 +1,9 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const iconVariants = {
+const iconVariants: Variants = {
   hidden: { pathLength: 0, opacity: 0 },
   visible: { 
     pathLength: 1, 
