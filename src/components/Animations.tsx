@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 export function ScrollReveal({ children, delay = 0, yOffset = 50 }: { children: ReactNode, delay?: number, yOffset?: number }) {
   return (
@@ -16,7 +16,7 @@ export function ScrollReveal({ children, delay = 0, yOffset = 50 }: { children: 
   );
 }
 
-export function AnimatedText({ text, el: Wrapper = "p", className }: { text: string, el?: keyof JSX.IntrinsicElements, className?: string }) {
+export function AnimatedText({ text, el: Wrapper = "p", className }: { text: string, el?: React.ElementType, className?: string }) {
   const words = text.split(" ");
   
   const container = {
