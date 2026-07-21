@@ -17,11 +17,6 @@ export default function About() {
                 We are the firm founders call before the meeting that matters.
               </h2>
             </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <p className="text-muted text-lg md:text-xl max-w-3xl leading-relaxed">
-                Wecreate Consult is a strategy and marketing firm in Abuja working across investment readiness, fundraising, grant writing, growth, business advisory and business development, for startups, established businesses and NGOs alike.
-              </p>
-            </ScrollReveal>
           </div>
         </section>
 
