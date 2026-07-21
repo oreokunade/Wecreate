@@ -25,7 +25,7 @@ export default function PageIslandLayout({ title, children }: PageIslandLayoutPr
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="w-full bg-[#141A23]/80 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] h-[40vh] min-h-[300px] md:min-h-[450px] flex items-center justify-center sticky top-[120px] md:top-[140px] z-0 overflow-hidden"
+          className="w-full bg-[#141A23]/80 backdrop-blur-xl rounded-[2rem] md:rounded-[3rem] h-[30vh] min-h-[220px] md:min-h-[350px] flex items-center justify-center sticky top-[120px] md:top-[140px] z-0 overflow-hidden"
         >
           {/* Subtle noise or gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 to-transparent z-0"></div>

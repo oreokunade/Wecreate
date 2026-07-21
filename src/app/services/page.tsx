@@ -114,6 +114,7 @@ function ServicesContent() {
   
   const [activeSection, setActiveSection] = useState(servicesData[0].id);
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   // Handle the scroll-spy logic
   useEffect(() => {
@@ -178,6 +179,69 @@ function ServicesContent() {
 
         {/* Services Split Layout */}
         <section className="pb-24 md:pb-32 container relative">
+          
+          {/* Mobile Sticky Custom Dropdown Nav */}
+          <div className="lg:hidden sticky top-[80px] z-40 bg-white/95 backdrop-blur-md -mx-4 px-4 sm:-mx-8 sm:px-8 py-3 border-b border-border shadow-sm mb-12">
+            <div className="relative">
+              <button
+                onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                className="w-full flex items-center justify-between bg-surface text-dark font-semibold py-3 sm:py-4 px-4 sm:px-5 rounded-xl border border-border focus:outline-none focus:border-primary shadow-sm text-sm sm:text-base"
+              >
+                <span className="truncate pr-2">
+                  {servicesData.find(s => s.id === activeSection)?.title || 'Select a service'}
+                </span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`text-primary transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : ''}`}>
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              </button>
+              
+              <AnimatePresence>
+                {isMobileDropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-[calc(100%+8px)] left-0 right-0 bg-white rounded-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] border border-border overflow-hidden flex flex-col z-50 max-h-[60vh] overflow-y-auto"
+                  >
+                    {servicesData.map((service, idx) => (
+                      <button
+                        key={`custom-${service.id}`}
+                        onClick={() => {
+                          setIsMobileDropdownOpen(false);
+                          const element = document.getElementById(service.id);
+                          if (element) {
+                            const y = element.getBoundingClientRect().top + window.scrollY - 150;
+                            window.scrollTo({ top: y, behavior: 'smooth' });
+                          }
+                        }}
+                        className={`text-left px-5 py-4 text-sm sm:text-base transition-colors flex items-center justify-between group ${
+                          activeSection === service.id 
+                            ? 'bg-primary/5 text-primary font-bold' 
+                            : 'text-dark hover:bg-surface'
+                        } ${idx !== servicesData.length - 1 ? 'border-b border-border/50' : ''}`}
+                      >
+                        <span className="truncate pr-4">{service.title}</span>
+                        {activeSection === service.id && (
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                        )}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+            
+            {/* Overlay to close when clicking outside */}
+            {isMobileDropdownOpen && (
+              <div 
+                className="fixed inset-0 z-40 bg-black/5 backdrop-blur-[1px] -mt-[80px]"
+                style={{ top: '80px', height: '100vh' }}
+                onClick={() => setIsMobileDropdownOpen(false)}
+              />
+            )}
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             
             {/* Left: Sticky Sidebar Index */}
