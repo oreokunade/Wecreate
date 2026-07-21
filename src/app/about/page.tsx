@@ -14,76 +14,121 @@ export default function About() {
           <div className="container">
             <ScrollReveal delay={0.1}>
               <h2 className="max-w-4xl mb-8 text-4xl md:text-5xl font-medium tracking-tight">
-                We do not just understand the math. We understand the <span className="text-primary">market.</span>
+                We are the firm founders call before the meeting that matters.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <p className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
-                Wecreate Consult was built on a simple premise: brilliant businesses in Africa are failing to raise capital because they cannot translate their operational reality into investor language.
+              <p className="text-muted text-lg md:text-xl max-w-3xl leading-relaxed">
+                Wecreate Consult is a strategy and marketing firm in Abuja working across investment readiness, fundraising, grant writing, growth, business advisory and business development, for startups, established businesses and NGOs alike.
               </p>
             </ScrollReveal>
           </div>
         </section>
 
-      {/* Founder */}
-      <section className="pb-24 md:pb-32">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        {/* Our Story */}
+        <section>
+          <div className="container">
             <ScrollReveal>
-              <div className="rounded-2xl overflow-hidden">
-                <img
-                  src="/images/samuel_portrait.png"
-                  alt="Samuel Ngoka, Founder of Wecreate Consult"
-                  className="w-full h-auto grayscale-[20%]"
-                />
-              </div>
-              <p className="mt-3 font-bold text-sm">Samuel Ngoka, Founder & Principal</p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.2}>
-              <div>
-                <h2 className="mb-8">The firm that bridges the gap.</h2>
-                <div className="space-y-5 text-muted text-lg leading-relaxed">
-                  <p>Samuel Ngoka founded Wecreate Consult after seeing a repeated pattern across the African startup ecosystem: founders with genuine traction, solid unit economics, and massive total addressable markets who were still failing to close rounds.</p>
-                  <p>The problem was rarely the business. The problem was the translation. Investors look for specific structures, specific models, and a specific narrative cadence that operators often lack the time or context to build.</p>
-                  <p>We built a team to fix that. Today, we are a collective of financial analysts, strategists, and storytellers based in Abuja. We don't just dress up bad ideas; we take good ideas and make them undeniable.</p>
-                </div>
-                <div className="mt-10">
-                  <Magnetic>
-                    <Link href="/services" className="inline-block border-2 border-dark text-dark px-8 py-3 rounded-full font-semibold hover:bg-dark hover:text-white transition-all">
-                      See our services
-                    </Link>
-                  </Magnetic>
-                </div>
+              <h3 className="text-3xl font-bold mb-6">Our story</h3>
+              <div className="space-y-6 text-muted text-lg leading-relaxed max-w-4xl">
+                <p>There is a moment in every startup where the story outgrows the founder's ability to tell it. The business is doing more than the pitch can explain. The numbers are moving faster than the model can track. Someone asks a simple question about unit economics and the room goes quiet.</p>
+                <p>Wecreate Consult was built for that moment.</p>
+                <p>We started because too many good African companies were losing rounds they should have won, not for lack of substance but for lack of preparation. Investors were saying no to businesses that deserved a yes, because nobody had done the unglamorous work of turning conviction into evidence.</p>
+                <p>So we do that work. Every day. Across sectors, across cities, across stages.</p>
+                <p>And the same discipline that wins a funding round wins a grant, lands a partnership and fixes a business model. Which is why our clients today are not only startups. They are established businesses making hard decisions, NGOs competing for donor funding and organisations that simply need clear thinking applied to a specific problem.</p>
               </div>
             </ScrollReveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Values */}
-      <section className="bg-surface py-24 md:py-32">
-        <div className="container">
-          <ScrollReveal>
-            <h2 className="mb-16">How we operate</h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
-            {[
-              { title: 'Data over dogma', text: 'We do not build models on wishes. We build them on verifiable assumptions and stress-tested logic.' },
-              { title: 'Absolute candor', text: 'If your valuation expectation is absurd, we will tell you. If your GTM is flawed, we will flag it. We are not here to agree with you; we are here to get you funded.' },
-              { title: 'The African context', text: 'We understand that African markets do not always behave like Silicon Valley textbooks. We build narratives that reflect that reality.' },
-              { title: 'Confidentiality as default', text: 'We deal with cap tables, unreleased numbers, and sensitive pivots. Our lips are sealed. Always.' }
-            ].map((value, i) => (
-              <ScrollReveal key={i} delay={0.1 * i}>
-                <div className="border-t border-border pt-6">
-                  <h3 className="mb-3">{value.title}</h3>
-                  <p className="text-muted leading-relaxed">{value.text}</p>
+        {/* What we believe */}
+        <section className="bg-surface py-16 px-4 md:px-8 rounded-3xl -mx-4 md:-mx-8">
+          <div className="container">
+            <ScrollReveal>
+              <h3 className="text-3xl font-bold mb-12">What we believe</h3>
+            </ScrollReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+              {[
+                { title: 'Preparation is a competitive advantage.', text: 'Most founders in this market are underprepared, not underqualified. Being the exception is easier than it sounds and worth more than it looks.' },
+                { title: 'A document is an argument.', text: 'A deck is not a formality. A cap table is not admin. Each one is a claim about the future that somebody will test. We build them to survive that test.' },
+                { title: 'Clarity beats polish.', text: 'A beautiful deck that hides a weak model wastes everyone\'s time. We would rather fix the model.' },
+                { title: 'Local knowledge is not optional.', text: 'Nigeria is not a footnote in a global template. Pricing, distribution, regulation and capital all behave differently here. We build from the ground we are standing on.' }
+              ].map((value, i) => (
+                <ScrollReveal key={i} delay={0.1 * i}>
+                  <div className="border-t border-border pt-6">
+                    <h4 className="text-xl font-bold mb-3">{value.title}</h4>
+                    <p className="text-muted leading-relaxed">{value.text}</p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* How we are different */}
+        <section>
+          <div className="container">
+            <ScrollReveal>
+              <h3 className="text-3xl font-bold mb-6">How we are different</h3>
+              <div className="space-y-6 text-muted text-lg leading-relaxed max-w-4xl">
+                <p>We are not a design shop that learned finance. We are not a finance shop that outsourced the story. We build both, in the same room, from the same set of facts, which is why our decks and our models never contradict each other.</p>
+                <p>We also say no. If a raise is premature, we will tell you before you spend six months learning it the expensive way.</p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Meet our founder */}
+        <section className="pb-8">
+          <div className="container">
+            <ScrollReveal>
+              <h3 className="text-xs uppercase tracking-[0.2em] text-muted font-semibold mb-12">The man behind the vision</h3>
+            </ScrollReveal>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
+              <ScrollReveal>
+                <div className="rounded-2xl overflow-hidden sticky top-32">
+                  <img
+                    src="/images/samuel_portrait.png"
+                    alt="Samuel Ngoka"
+                    className="w-full h-auto grayscale-[20%]"
+                  />
+                  <div className="mt-6">
+                    <h4 className="text-2xl font-bold">Samuel Ngoka</h4>
+                    <p className="text-primary font-medium mt-1">Venture Capital Consultant. Ecosystem Builder.</p>
+                  </div>
                 </div>
               </ScrollReveal>
-            ))}
+
+              <ScrollReveal delay={0.2}>
+                <div className="space-y-12">
+                  <div className="space-y-6 text-muted text-lg leading-relaxed">
+                    <p>Samuel has spent close to a decade inside the African startup ecosystem, and he has occupied every seat in the room. He has been the founder pitching for his life. He has been the staff member watching a good company lose a round it deserved to win. He has been the observer studying, quietly, why some businesses attract capital while better ones go home empty handed.</p>
+                    <p>That triple perspective is rare, and it is the foundation Wecreate Consult is built on. Samuel does not advise from theory. He advises from scar tissue.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-2xl font-bold mb-6">Why I started Wecreate <span className="text-muted/50 font-normal">(in Samuel's words)</span></h4>
+                    <div className="space-y-6 text-muted text-lg leading-relaxed border-l-2 border-primary/20 pl-6 italic">
+                      <p>"I have watched brilliant founders lose funding for reasons that had nothing to do with their business and everything to do with their preparation. A cap table nobody could explain. A valuation pulled from the air. A deck that buried the one number an investor was actually looking for.</p>
+                      <p>I sat through enough of those rooms, on every side of the table, to notice the pattern. The founders who won were not always the smartest people in the market. They were the best prepared. And preparation is not a talent. It is a service someone can provide.</p>
+                      <p>So I built the firm I kept wishing existed. The one that treats a founder's documents the way an investor will treat them, before the investor ever does. The one that tells you the truth about your numbers while there is still time to fix them.</p>
+                      <p>Almost a decade in this ecosystem has taught me one thing above everything else. African businesses do not lack ambition, talent or markets. They lack the machinery of readiness. Wecreate Consult is that machinery."</p>
+                    </div>
+                  </div>
+
+                  <div className="pt-8 border-t border-border">
+                    <Magnetic>
+                      <a href="https://linkedin.com/in/samuel-ngoka" target="_blank" rel="noopener noreferrer" className="inline-block border-2 border-dark text-dark px-8 py-3 rounded-full font-semibold hover:bg-dark hover:text-white transition-all">
+                        Connect with Samuel on LinkedIn
+                      </a>
+                    </Magnetic>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </PageIslandLayout>
   );
