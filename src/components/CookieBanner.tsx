@@ -47,7 +47,10 @@ export default function CookieBanner() {
                 Accept
               </button>
               <button 
-                onClick={() => setShowBanner(false)}
+                onClick={() => {
+                  localStorage.setItem('cookie-consent', 'declined');
+                  setShowBanner(false);
+                }}
                 className="px-4 py-2.5 text-[#141A23] text-sm font-semibold hover:bg-gray-100 rounded-full transition-colors"
               >
                 Decline
