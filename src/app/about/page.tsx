@@ -3,28 +3,27 @@
 import { ScrollReveal } from '@/components/Animations';
 import Magnetic from '@/components/Magnetic';
 import Link from 'next/link';
+import PageIslandLayout from '@/components/PageIslandLayout';
 
 export default function About() {
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-40 pb-20 md:pb-28">
-        <div className="container">
-          <ScrollReveal>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted font-semibold mb-6">About Us</p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <h1 className="max-w-4xl mb-8">
-              We do not just understand the math. We understand the <span className="text-primary">market.</span>
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
-              Wecreate Consult was built on a simple premise: brilliant businesses in Africa are failing to raise capital because they cannot translate their operational reality into investor language.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+    <PageIslandLayout title="About Us">
+      <div className="flex flex-col gap-16 md:gap-24">
+        {/* Intro */}
+        <section className="pt-8">
+          <div className="container">
+            <ScrollReveal delay={0.1}>
+              <h2 className="max-w-4xl mb-8 text-4xl md:text-5xl font-medium tracking-tight">
+                We do not just understand the math. We understand the <span className="text-primary">market.</span>
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
+                Wecreate Consult was built on a simple premise: brilliant businesses in Africa are failing to raise capital because they cannot translate their operational reality into investor language.
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
 
       {/* Founder */}
       <section className="pb-24 md:pb-32">
@@ -85,6 +84,7 @@ export default function About() {
           </div>
         </div>
       </section>
-    </>
+      </div>
+    </PageIslandLayout>
   );
 }

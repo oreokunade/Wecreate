@@ -1,6 +1,7 @@
 "use client";
 
 import { ScrollReveal } from '@/components/Animations';
+import PageIslandLayout from '@/components/PageIslandLayout';
 
 export default function Work() {
   const works = [
@@ -11,25 +12,23 @@ export default function Work() {
   ];
 
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-40 pb-20 md:pb-28">
-        <div className="container">
-          <ScrollReveal>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted font-semibold mb-6">Selected Work</p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <h1 className="max-w-3xl mb-8">
-              Work that stands up to <span className="text-primary">diligence.</span>
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed">
-              Confidentiality is our default. Here is a curated selection of recent outcomes.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+    <PageIslandLayout title="Selected Work">
+      <div className="flex flex-col gap-12 md:gap-20">
+        {/* Intro */}
+        <section className="pt-8">
+          <div className="container">
+            <ScrollReveal delay={0.1}>
+              <h2 className="max-w-3xl mb-8 text-4xl md:text-5xl font-medium tracking-tight">
+                Work that stands up to <span className="text-primary">diligence.</span>
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed">
+                Confidentiality is our default. Here is a curated selection of recent outcomes.
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
 
       {/* Work Table */}
       <section className="pb-24 md:pb-32">
@@ -63,6 +62,7 @@ export default function Work() {
           ))}
         </div>
       </section>
-    </>
+      </div>
+    </PageIslandLayout>
   );
 }

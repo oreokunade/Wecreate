@@ -3,6 +3,7 @@
 import { ScrollReveal } from '@/components/Animations';
 import Magnetic from '@/components/Magnetic';
 import Link from 'next/link';
+import PageIslandLayout from '@/components/PageIslandLayout';
 
 export default function Insights() {
   const articles = [
@@ -14,25 +15,23 @@ export default function Insights() {
   ];
 
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-40 pb-20 md:pb-28">
-        <div className="container">
-          <ScrollReveal>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted font-semibold mb-6">Insights</p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <h1 className="max-w-3xl mb-8">
-              What we are <span className="text-primary">seeing.</span>
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed">
-              Notes from inside the work. Written for founders, not for algorithms.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+    <PageIslandLayout title="Insights">
+      <div className="flex flex-col gap-12 md:gap-20">
+        {/* Intro */}
+        <section className="pt-8">
+          <div className="container">
+            <ScrollReveal delay={0.1}>
+              <h2 className="max-w-3xl mb-8 text-4xl md:text-5xl font-medium tracking-tight">
+                What we are <span className="text-primary">seeing.</span>
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed">
+                Notes from inside the work. Written for founders, not for algorithms.
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
 
       {/* Articles List */}
       <section className="pb-24 md:pb-32">
@@ -72,6 +71,7 @@ export default function Insights() {
           </ScrollReveal>
         </div>
       </section>
-    </>
+      </div>
+    </PageIslandLayout>
   );
 }

@@ -2,30 +2,29 @@
 
 import { ScrollReveal } from '@/components/Animations';
 import Magnetic from '@/components/Magnetic';
+import PageIslandLayout from '@/components/PageIslandLayout';
 
 export default function Contact() {
   const inputClasses = "w-full bg-transparent border-b border-border py-3 text-lg text-dark placeholder:text-muted/50 focus:border-primary focus:outline-none transition-colors";
 
   return (
-    <>
-      {/* Hero */}
-      <section className="pt-40 pb-20 md:pb-28">
-        <div className="container">
-          <ScrollReveal>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted font-semibold mb-6">Contact</p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <h1 className="max-w-3xl mb-8">
-              Tell us where you <span className="text-primary">are.</span>
-            </h1>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed">
-              The more specific you are, the more useful our first reply will be.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+    <PageIslandLayout title="Contact Us">
+      <div className="flex flex-col gap-12 md:gap-20">
+        {/* Intro */}
+        <section className="pt-8">
+          <div className="container">
+            <ScrollReveal delay={0.1}>
+              <h2 className="max-w-3xl mb-8 text-4xl md:text-5xl font-medium tracking-tight">
+                Tell us where you <span className="text-primary">are.</span>
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <p className="text-muted text-lg md:text-xl max-w-xl leading-relaxed">
+                The more specific you are, the more useful our first reply will be.
+              </p>
+            </ScrollReveal>
+          </div>
+        </section>
 
       {/* Form + Info */}
       <section className="pb-24 md:pb-32">
@@ -111,6 +110,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </>
+      </div>
+    </PageIslandLayout>
   );
 }
