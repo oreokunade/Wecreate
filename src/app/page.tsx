@@ -45,7 +45,7 @@ export default function Home() {
           <WebGLBackground />
 
           {/* Content overlay */}
-          <div className="relative z-10 flex flex-col flex-1 w-full px-5 sm:px-6 md:px-[50px] pb-6 sm:pb-8 -translate-y-4 md:-translate-y-8 lg:-translate-y-12">
+          <div className="relative z-10 flex flex-col flex-1 w-full px-4 sm:px-6 md:px-[50px] pb-6 sm:pb-8 -translate-y-4 md:-translate-y-8 lg:-translate-y-12">
             
             {/* Headline — Very large, left-aligned, shifted downwards slightly */}
             <div className="flex flex-col justify-center flex-1 w-full pt-16 md:pt-32">

@@ -30,7 +30,7 @@ export default function PageIslandLayout({ title, children }: PageIslandLayoutPr
           {/* Subtle noise or gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 to-transparent z-0"></div>
           
-          <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] font-bold z-10 text-center tracking-tight px-4">
+          <h1 className="text-white text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] font-bold z-10 text-center tracking-tight px-4 sm:px-8">
             {title}
           </h1>
         </motion.div>
@@ -40,7 +40,7 @@ export default function PageIslandLayout({ title, children }: PageIslandLayoutPr
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="w-full bg-[#f8f9fa] flex-1 rounded-[2rem] md:rounded-[3rem] p-6 sm:p-10 md:p-16 lg:p-24 shadow-2xl relative z-10 overflow-hidden"
+          className="w-full bg-[#f8f9fa] flex-1 rounded-[2rem] md:rounded-[3rem] p-4 sm:p-8 md:p-16 lg:p-24 shadow-2xl relative z-10 overflow-hidden"
         >
           {children}
         </motion.div>
