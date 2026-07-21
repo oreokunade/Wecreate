@@ -19,6 +19,7 @@ import WebGLBackground from '@/components/WebGLBackground';
 import TextRevealScroll from '@/components/TextRevealScroll';
 import FaqSection from '@/components/FaqSection';
 import ServicesStack from '@/components/ServicesStack';
+import LogoMarquee from '@/components/LogoMarquee';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import CountUp from '@/components/CountUp';
 
@@ -118,6 +119,9 @@ export default function Home() {
           </div>
         </motion.section>
       </motion.div>
+
+      {/* ===== 1.1 LOGOS SECTION ===== */}
+      <LogoMarquee />
 
       {/* ===== 1.25 ABOUT REVEAL SECTION ===== */}
       <TextRevealScroll 
@@ -429,7 +433,14 @@ export default function Home() {
                 >
                   <div className="relative z-10 flex flex-col justify-center w-full h-full">
                     <div className="flex justify-between items-center w-full">
-                      <h3 className={`text-xl sm:text-3xl md:text-5xl lg:text-[4rem] font-medium tracking-tight ${item.titleColor}`}>{item.title}</h3>
+                      <div className="flex items-center gap-3 md:gap-4">
+                        <h3 className={`text-xl sm:text-3xl md:text-5xl lg:text-[4rem] font-medium tracking-tight ${item.titleColor}`}>{item.title}</h3>
+                        <div className={`lg:hidden flex items-center justify-center transition-transform duration-300 opacity-70 ${isActive ? 'rotate-180' : ''} ${item.titleColor}`}>
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                          </svg>
+                        </div>
+                      </div>
                       <span className="text-[2.5rem] sm:text-[4.5rem] md:text-[7.5rem] lg:text-[8.5rem] font-bold font-sans leading-[0.75] text-white opacity-60 flex-shrink-0">
                         {item.step}
                       </span>

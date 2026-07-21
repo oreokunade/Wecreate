@@ -8,6 +8,7 @@ import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "Wecreate Consult | Investment Readiness, Fundraising and Grants",
@@ -28,6 +29,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </SmoothScrolling>
+        <CookieBanner />
       </body>
     </html>
   );

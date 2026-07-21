@@ -141,8 +141,13 @@ export default function WebGLBackground() {
     function resize() {
       // Force pixel ratio to 1 for massive performance gain
       const dpr = 1; 
-      canvas!.width = canvas!.clientWidth * dpr;
-      canvas!.height = canvas!.clientHeight * dpr;
+      const displayWidth = canvas!.clientWidth * dpr;
+      const displayHeight = canvas!.clientHeight * dpr;
+
+      if (canvas!.width !== displayWidth || canvas!.height !== displayHeight) {
+        canvas!.width = displayWidth;
+        canvas!.height = displayHeight;
+      }
     }
 
     resize();

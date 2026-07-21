@@ -2,12 +2,24 @@
 import Link from 'next/link';
 import Magnetic from './Magnetic';
 
-export default function SlantedButton({ href, text, variant = 'light' }: { href: string, text: string, variant?: 'light' | 'dark' }) {
+export default function SlantedButton({ 
+  href, 
+  text, 
+  variant = 'light',
+  target,
+  rel
+}: { 
+  href: string, 
+  text: string, 
+  variant?: 'light' | 'dark',
+  target?: string,
+  rel?: string
+}) {
   const isDark = variant === 'dark';
 
   return (
     <Magnetic>
-      <Link href={href} className="group flex items-center justify-center w-fit">
+      <Link href={href} target={target} rel={rel} className="group flex items-center justify-center w-fit">
         
         {/* Left Block (Text) */}
         <div className="relative flex items-center justify-center px-5 sm:px-8 h-11 sm:h-14">

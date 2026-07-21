@@ -43,7 +43,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#f8f9fa] py-16 md:py-24 px-5 sm:px-6 md:px-12 lg:px-20 relative z-10 border-t border-[#141A23]/5">
+    <section id="faq" className="scroll-mt-24 md:scroll-mt-32 bg-[#f8f9fa] py-16 md:py-24 px-5 sm:px-6 md:px-12 lg:px-20 relative z-10 border-t border-[#141A23]/5">
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-12 md:mb-16 text-center flex flex-col items-center">
           <h2 className="text-[0.7rem] md:text-[0.8rem] font-bold uppercase tracking-[0.2em] text-[#141A23]/40 mb-4">

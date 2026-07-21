@@ -22,6 +22,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'FAQ', path: '/#faq' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -48,7 +49,7 @@ export default function Navbar() {
               <img 
                 src="/logo.png" 
                 alt="Wecreate Logo" 
-                className="h-8 sm:h-9 w-auto object-contain" 
+                className="h-10 sm:h-11 w-auto object-contain scale-110 origin-left" 
               />
             </Link>
             <button

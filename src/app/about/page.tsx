@@ -6,6 +6,7 @@ import Link from 'next/link';
 import PageIslandLayout from '@/components/PageIslandLayout';
 import { motion } from 'framer-motion';
 import { FilledShield, FilledDocument, FilledSparkles, FilledGlobe } from '@/components/FilledIcons';
+import SlantedButton from '@/components/SlantedButton';
 
 export default function About() {
   return (
@@ -130,19 +131,21 @@ export default function About() {
             </ScrollReveal>
             
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
-              <ScrollReveal>
-                <div className="rounded-2xl overflow-hidden lg:sticky lg:top-32">
-                  <img
-                    src="/images/samuel_portrait.png"
-                    alt="Samuel Ngoka"
-                    className="w-full h-auto grayscale-[20%]"
-                  />
-                  <div className="mt-6">
-                    <h4 className="text-2xl font-bold">Samuel Ngoka</h4>
-                    <p className="text-primary font-medium mt-1">Venture Capital Consultant. Ecosystem Builder.</p>
+              <div className="lg:sticky lg:top-32">
+                <ScrollReveal>
+                  <div className="rounded-2xl overflow-hidden">
+                    <img
+                      src="/samuel.jpg"
+                      alt="Samuel Ngoka"
+                      className="w-full h-auto grayscale-[20%]"
+                    />
+                    <div className="mt-6">
+                      <h4 className="text-2xl font-bold">Samuel Ngoka</h4>
+                      <p className="text-primary font-medium mt-1">Venture Capital Consultant. Ecosystem Builder.</p>
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
+                </ScrollReveal>
+              </div>
 
               <ScrollReveal delay={0.2}>
                 <div className="space-y-12">
@@ -162,11 +165,15 @@ export default function About() {
                   </div>
 
                   <div className="pt-8 border-t border-border">
-                    <Magnetic>
-                      <a href="https://linkedin.com/in/samuel-ngoka" target="_blank" rel="noopener noreferrer" className="inline-block border-2 border-dark text-dark px-8 py-3 rounded-full font-semibold hover:bg-dark hover:text-white transition-all">
-                        Connect with Samuel on LinkedIn
-                      </a>
-                    </Magnetic>
+                    <div className="inline-block">
+                      <SlantedButton 
+                        href="https://linkedin.com/in/samuel-ngoka" 
+                        text="Connect with Samuel on LinkedIn" 
+                        variant="dark"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>

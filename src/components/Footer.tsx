@@ -33,19 +33,14 @@ export default function Footer() {
           </div>
 
           {/* Right Column: Links */}
-          <div className="flex flex-row gap-12 md:gap-16 lg:w-[40%] lg:justify-end">
+          <div className="flex flex-row gap-12 md:gap-16 lg:w-[40%] lg:justify-start lg:pl-16">
             <div>
               <h4 className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/40 mb-5 md:mb-6">Navigate</h4>
               <ul className="space-y-3 md:space-y-4">
                 <li><Link href="/about" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">About</Link></li>
                 <li><Link href="/services" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">Services</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/40 mb-5 md:mb-6">Connect</h4>
-              <ul className="space-y-3 md:space-y-4">
-                <li><a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">X (Twitter)</a></li>
+                <li><Link href="/contact" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">Contact</Link></li>
+                <li><Link href="/#faq" className="text-white/80 hover:text-white transition-colors text-sm md:text-base">FAQ</Link></li>
               </ul>
             </div>
           </div>
@@ -53,7 +48,7 @@ export default function Footer() {
         </div>
 
         {/* Massive Brand Name Marquee */}
-        <div className="w-[100vw] relative left-1/2 -translate-x-1/2 flex items-center overflow-hidden mb-4 md:mb-8">
+        <div className="w-[100vw] relative left-1/2 -translate-x-1/2 flex items-center overflow-hidden mb-4 md:mb-8 pointer-events-none">
           <motion.div 
             className="flex whitespace-nowrap"
             animate={{ x: ["0%", "-50%"] }}
@@ -69,7 +64,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-[0.65rem] font-mono tracking-widest text-white/40 uppercase">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-[0.65rem] font-mono tracking-widest text-white/40 uppercase relative z-20">
           <p>© {new Date().getFullYear()} Wecreate Consult. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
