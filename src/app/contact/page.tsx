@@ -3,6 +3,7 @@
 import { ScrollReveal } from '@/components/Animations';
 import Magnetic from '@/components/Magnetic';
 import PageIslandLayout from '@/components/PageIslandLayout';
+import SlantedButton from '@/components/SlantedButton';
 
 export default function Contact() {
   const inputClasses = "w-full bg-transparent border-b border-border py-3 text-lg text-dark placeholder:text-muted/50 focus:border-primary focus:outline-none transition-colors";
@@ -26,84 +27,50 @@ export default function Contact() {
           </div>
         </section>
 
-      {/* Form + Info */}
+      {/* Info Section */}
       <section className="pb-24 md:pb-32">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-16 lg:gap-24">
-            {/* Form */}
+          <div className="max-w-2xl">
             <ScrollReveal delay={0.1}>
-              <form
-                className="space-y-10"
-                onSubmit={(e) => { e.preventDefault(); alert('Received. We will reply within two working days.'); }}
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  <div>
-                    <label htmlFor="name" className="block text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3">Full name</label>
-                    <input type="text" id="name" required className={inputClasses} />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3">Email address</label>
-                    <input type="email" id="email" required className={inputClasses} />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                  <div>
-                    <label htmlFor="company" className="block text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3">Company name</label>
-                    <input type="text" id="company" required className={inputClasses} />
-                  </div>
-                  <div>
-                    <label htmlFor="website" className="block text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3">Website or deck link</label>
-                    <input type="url" id="website" className={inputClasses} />
-                  </div>
-                </div>
-
+              <div className="bg-surface p-8 sm:p-12 rounded-3xl space-y-10 border border-border">
+                
+                {/* Office */}
                 <div>
-                  <label htmlFor="help" className="block text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3">What do you need help with?</label>
-                  <select id="help" required className={inputClasses} defaultValue="">
-                    <option value="" disabled>Select a service</option>
-                    <option value="investment">Investment readiness</option>
-                    <option value="fundraising">Fundraising</option>
-                    <option value="grants">Grant writing</option>
-                    <option value="gtm">Go-to-market and growth</option>
-                    <option value="advisory">Business advisory</option>
-                    <option value="brand">Brand and media</option>
-                    <option value="other">Something else</option>
-                  </select>
+                  <p className="text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3 flex items-center gap-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Office
+                  </p>
+                  <p className="font-medium text-xl text-dark">Abuja, Nigeria</p>
                 </div>
-
+                
+                {/* Email */}
                 <div>
-                  <label htmlFor="details" className="block text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3">Tell us about it</label>
-                  <textarea id="details" required className={`${inputClasses} min-h-[120px] resize-y`} />
-                </div>
-
-                <Magnetic>
-                  <button
-                    type="submit"
-                    className="bg-primary text-white px-10 py-4 rounded-full font-semibold text-base hover:bg-primary-600 transition-colors"
-                  >
-                    Send it through
-                  </button>
-                </Magnetic>
-              </form>
-            </ScrollReveal>
-
-            {/* Info Sidebar */}
-            <ScrollReveal delay={0.3}>
-              <div className="bg-surface p-8 rounded-2xl space-y-8 h-fit sticky top-32">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-2">Office</p>
-                  <p className="font-semibold">Abuja, Nigeria</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-2">Email</p>
-                  <a href="mailto:hello@wecreateconsult.com" className="font-semibold hover:text-primary transition-colors">
+                  <p className="text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3 flex items-center gap-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    Email
+                  </p>
+                  <a href="mailto:hello@wecreateconsult.com" className="font-medium text-xl text-dark hover:text-primary transition-colors">
                     hello@wecreateconsult.com
                   </a>
                 </div>
+                
+                {/* Social */}
                 <div>
-                  <p className="text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-2">Social</p>
-                  <a href="#" className="font-semibold hover:text-primary transition-colors">LinkedIn</a>
+                  <p className="text-xs uppercase tracking-[0.15em] text-muted font-semibold mb-3 flex items-center gap-2">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    Social
+                  </p>
+                  <a href="https://linkedin.com/company/wecreateconsult" target="_blank" rel="noopener noreferrer" className="font-medium text-xl text-dark hover:text-primary transition-colors">
+                    LinkedIn
+                  </a>
+                </div>
+
+                <div className="pt-8 mt-8 border-t border-border">
+                  <SlantedButton 
+                    href="mailto:hello@wecreateconsult.com" 
+                    text="Write to us" 
+                    variant="dark" 
+                  />
                 </div>
               </div>
             </ScrollReveal>

@@ -45,7 +45,7 @@ export default function Home() {
           <WebGLBackground />
 
           {/* Content overlay */}
-          <div className="relative z-10 flex flex-col flex-1 w-full px-4 sm:px-6 md:px-[50px] pb-6 sm:pb-8 -translate-y-4 md:-translate-y-8 lg:-translate-y-12">
+          <div className="relative z-10 flex flex-col flex-1 w-full px-4 sm:px-6 md:px-[50px] pb-6 sm:pb-8 -translate-y-8 md:-translate-y-12 lg:-translate-y-16">
             
             {/* Headline — Very large, left-aligned, shifted downwards slightly */}
             <div className="flex flex-col justify-center flex-1 w-full pt-16 md:pt-32">
@@ -59,7 +59,7 @@ export default function Home() {
             {/* Bottom bar — description left, CTA right */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-10 md:gap-8 pt-6 sm:pt-10">
               <ScrollReveal>
-                <p className="text-white text-[1rem] sm:text-[1.1rem] md:text-[1.35rem] lg:text-[1.35rem] max-w-2xl leading-relaxed font-normal">
+                <p className="text-white text-[1.05rem] sm:text-[1.15rem] md:text-[1.4rem] lg:text-[1.4rem] max-w-2xl leading-relaxed font-normal">
                   Wecreate Consult builds the strategy, the numbers and the narrative that make investors say yes, funders commit and customers stay
                 </p>
               </ScrollReveal>
@@ -76,7 +76,7 @@ export default function Home() {
                         <div className="w-10 bg-white group-hover:bg-gray-100 transition-colors -skew-x-12 rounded-r-[10px] -ml-4 relative z-10"></div>
                       </div>
                       {/* Text */}
-                      <span className="relative z-20 text-[#0A192F] text-[0.65rem] sm:text-[0.75rem] md:text-[0.8rem] font-bold tracking-widest uppercase">
+                      <span className="relative z-20 text-[#0A192F] text-[0.7rem] sm:text-[0.8rem] md:text-[0.85rem] font-bold tracking-widest uppercase">
                         Book a discovery call
                       </span>
                     </Link>
@@ -90,7 +90,7 @@ export default function Home() {
                       </div>
                       {/* Text & Icon */}
                       <div className="relative z-20 flex items-center gap-3">
-                        <span className="text-white text-[0.65rem] sm:text-[0.75rem] md:text-[0.8rem] font-semibold tracking-widest uppercase">
+                        <span className="text-white text-[0.7rem] sm:text-[0.8rem] md:text-[0.85rem] font-semibold tracking-widest uppercase">
                           See how we work
                         </span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-white">

@@ -14,7 +14,7 @@ export default function Footer() {
         <WebGLBackground />
       </div>
 
-      <div className="container relative z-10">
+      <div className="container px-6 md:px-8 relative z-10">
         
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-16 lg:gap-8 mb-24 md:mb-32">

@@ -4,6 +4,8 @@ import { ScrollReveal } from '@/components/Animations';
 import Magnetic from '@/components/Magnetic';
 import Link from 'next/link';
 import PageIslandLayout from '@/components/PageIslandLayout';
+import { motion } from 'framer-motion';
+import { FilledShield, FilledDocument, FilledSparkles, FilledGlobe } from '@/components/FilledIcons';
 
 export default function About() {
   return (
@@ -42,19 +44,66 @@ export default function About() {
             <ScrollReveal>
               <h3 className="text-3xl font-bold mb-12">What we believe</h3>
             </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
-                { title: 'Preparation is a competitive advantage.', text: 'Most founders in this market are underprepared, not underqualified. Being the exception is easier than it sounds and worth more than it looks.' },
-                { title: 'A document is an argument.', text: 'A deck is not a formality. A cap table is not admin. Each one is a claim about the future that somebody will test. We build them to survive that test.' },
-                { title: 'Clarity beats polish.', text: 'A beautiful deck that hides a weak model wastes everyone\'s time. We would rather fix the model.' },
-                { title: 'Local knowledge is not optional.', text: 'Nigeria is not a footnote in a global template. Pricing, distribution, regulation and capital all behave differently here. We build from the ground we are standing on.' }
+                { 
+                  title: 'Preparation is a competitive advantage.', 
+                  text: 'Most founders in this market are underprepared, not underqualified. Being the exception is easier than it sounds and worth more than it looks.',
+                  icon: <FilledShield size={48} className="fill-current" />,
+                  bg: 'bg-primary-50',
+                  textCol: 'text-dark',
+                  mutedText: 'text-dark/70',
+                },
+                { 
+                  title: 'A document is an argument.', 
+                  text: 'A deck is not a formality. A cap table is not admin. Each one is a claim about the future that somebody will test. We build them to survive that test.',
+                  icon: <FilledDocument size={48} className="fill-current" />,
+                  bg: 'bg-dark',
+                  textCol: 'text-white',
+                  mutedText: 'text-white/70',
+                },
+                { 
+                  title: 'Clarity beats polish.', 
+                  text: "A beautiful deck that hides a weak model wastes everyone's time. We would rather fix the model.",
+                  icon: <FilledSparkles size={48} className="fill-current" />,
+                  bg: 'bg-primary',
+                  textCol: 'text-white',
+                  mutedText: 'text-white/80',
+                },
+                { 
+                  title: 'Local knowledge is not optional.', 
+                  text: 'Nigeria is not a footnote in a global template. Pricing, distribution, regulation and capital all behave differently here. We build from the ground we are standing on.',
+                  icon: <FilledGlobe size={48} className="fill-current" />,
+                  bg: 'bg-white',
+                  textCol: 'text-dark',
+                  mutedText: 'text-dark/70',
+                }
               ].map((value, i) => (
-                <ScrollReveal key={i} delay={0.1 * i}>
-                  <div className="border-t border-border pt-6">
-                    <h4 className="text-xl font-bold mb-3">{value.title}</h4>
-                    <p className="text-muted leading-relaxed">{value.text}</p>
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.7, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className={`${value.bg} ${value.textCol} p-8 sm:p-10 md:p-12 min-h-[350px] flex flex-col group border-[0.5px] border-[#141A23]/5 rounded-3xl h-full`}
+                >
+                  <div className="flex justify-between items-start w-full">
+                    <div className={`transform group-hover:scale-110 transition-transform duration-500 ${value.textCol} origin-top-left`}>
+                      {value.icon}
+                    </div>
+                    <span className="text-[0.65rem] sm:text-[0.7rem] font-mono tracking-widest opacity-50">
+                      0{i + 1}.
+                    </span>
                   </div>
-                </ScrollReveal>
+                  <div className="mt-8 flex-1 flex flex-col justify-end">
+                    <h4 className="text-[1.5rem] md:text-[1.8rem] font-bold tracking-tight mb-4 leading-tight max-w-[300px]">
+                      {value.title}
+                    </h4>
+                    <p className={`${value.mutedText} text-[0.95rem] leading-relaxed max-w-sm`}>
+                      {value.text}
+                    </p>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -82,7 +131,7 @@ export default function About() {
             
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
               <ScrollReveal>
-                <div className="rounded-2xl overflow-hidden sticky top-32">
+                <div className="rounded-2xl overflow-hidden lg:sticky lg:top-32">
                   <img
                     src="/images/samuel_portrait.png"
                     alt="Samuel Ngoka"

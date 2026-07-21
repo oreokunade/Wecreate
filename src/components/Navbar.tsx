@@ -22,6 +22,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   // The IntegratedBio layout has the logo on the left (white) and a pill menu on the right.
@@ -47,20 +48,20 @@ export default function Navbar() {
               <img 
                 src="/logo.png" 
                 alt="Wecreate Logo" 
-                className="h-6 sm:h-7 w-auto object-contain" 
+                className="h-8 sm:h-9 w-auto object-contain" 
               />
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="bg-[#1B2326] w-10 h-10 rounded-xl flex flex-col justify-center items-center gap-[5px] transition-colors"
+              className="bg-primary w-10 h-10 rounded-xl flex flex-col justify-center items-center gap-[5px] transition-colors"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
                 <span className="text-white text-lg leading-none">✕</span>
               ) : (
                 <>
-                  <span className="w-[18px] h-[1.5px] bg-[#C1D2A4] block rounded-full"></span>
-                  <span className="w-[18px] h-[1.5px] bg-[#C1D2A4] block rounded-full"></span>
+                  <span className="w-[18px] h-[1.5px] bg-white block rounded-full"></span>
+                  <span className="w-[18px] h-[1.5px] bg-white block rounded-full"></span>
                 </>
               )}
             </button>
@@ -140,7 +141,7 @@ export default function Navbar() {
                   <Link
                     href={link.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`block text-[3.5rem] sm:text-[4.5rem] leading-[1.1] font-bold tracking-tighter transition-colors ${
+                    className={`block text-[2rem] sm:text-[3rem] leading-[1.1] font-bold tracking-tighter transition-colors ${
                       pathname === link.path ? 'text-primary' : 'text-[#141A23] hover:text-primary'
                     }`}
                   >
@@ -159,7 +160,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center bg-[#1B2326] text-white px-8 py-4 rounded-2xl text-[1rem] font-semibold uppercase tracking-[0.08em] shadow-lg active:scale-95 transition-all"
+                  className="inline-flex items-center justify-center bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-[0.875rem] sm:text-[1rem] font-semibold uppercase tracking-[0.08em] shadow-lg shadow-primary/25 hover:scale-105 active:scale-95 transition-all duration-300"
                 >
                   Book a call
                 </Link>

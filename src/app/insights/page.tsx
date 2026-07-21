@@ -62,8 +62,11 @@ export default function Insights() {
                   className="flex-1 min-w-[200px] px-5 py-3 rounded-full border border-border text-base focus:border-primary focus:outline-none transition-colors"
                 />
                 <Magnetic>
-                  <button type="submit" className="bg-primary text-white px-7 py-3 rounded-full font-semibold hover:bg-primary-600 transition-colors whitespace-nowrap">
-                    Join the list
+                  <button 
+                    type="submit" 
+                    className="inline-flex items-center justify-center bg-primary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl text-[0.875rem] sm:text-[1rem] font-semibold uppercase tracking-[0.08em] shadow-lg shadow-primary/25 hover:scale-105 active:scale-95 transition-all duration-300 whitespace-nowrap"
+                  >
+                    Subscribe
                   </button>
                 </Magnetic>
               </form>
