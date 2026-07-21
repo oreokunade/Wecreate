@@ -135,9 +135,9 @@ export default function About() {
                 <ScrollReveal>
                   <div className="rounded-2xl overflow-hidden">
                     <img
-                      src="/samuel.jpg"
+                      src="/samuel2.jpg"
                       alt="Samuel Ngoka"
-                      className="w-full h-auto grayscale-[20%]"
+                      className="w-full aspect-[4/5] object-cover object-bottom grayscale-[20%]"
                     />
                     <div className="mt-6">
                       <h4 className="text-2xl font-bold">Samuel Ngoka</h4>
